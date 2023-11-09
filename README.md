@@ -6,7 +6,7 @@ To Perform the various feature selection techniques on a dataset and save the da
 Feature selection is to find the best set of features that allows one to build useful models.
 Selecting the best features helps the model to perform well. 
 
-# #ALGORITHM
+## ALGORITHM
 ### STEP 1
 Read the given Data
 ### STEP 2
