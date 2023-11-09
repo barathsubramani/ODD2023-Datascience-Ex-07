@@ -1,12 +1,12 @@
-# Ex-07-Feature-Selection
+## Ex-07-Feature-Selection
 ## AIM
 To Perform the various feature selection techniques on a dataset and save the data to a file. 
 
-# Explanation
+## Explanation
 Feature selection is to find the best set of features that allows one to build useful models.
 Selecting the best features helps the model to perform well. 
 
-# ALGORITHM
+# #ALGORITHM
 ### STEP 1
 Read the given Data
 ### STEP 2
@@ -18,12 +18,10 @@ Save the data to the file
 
 # CODE AND OUPUT:
 ```
-NAME : R . JOYCE BEULAH
-REG NO : 212222230058
+Name: Barath S
+Reg no: 212222230018
 ```
-
-
-```
+```python
 import pandas as pd
 import numpy as np
 import matplotlib
