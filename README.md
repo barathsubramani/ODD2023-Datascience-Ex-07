@@ -36,9 +36,7 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import mutual_info_classif
 from sklearn.feature_selection import mutual_info_regression
 from sklearn.feature_selection import chi2
-
 df=pd.read_csv("/content/titanic_dataset.csv")
-
 df.columns
 ```
 ![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex-07/assets/118343698/f12b92dd-2b99-4112-b503-f6621e188376)
@@ -128,11 +126,8 @@ data
 k=5
 selector = SelectKBest(score_func=chi2,k=k)
 x_new = selector.fit_transform(x,y)
-
 selected_feature_indices = selector.get_support(indices=True)
-
 selected_feature_indices = selector.get_support(indices=True)
-
 selected_features=x.columns[selected_feature_indices]
 print("Selected Features: ")
 print(selected_features)
@@ -143,7 +138,6 @@ print(selected_features)
 import pandas as pd
 from sklearn.feature_selection import SelectFromModel
 from sklearn.ensemble import RandomForestClassifier
-
 model = RandomForestClassifier()
 sfm = SelectFromModel(model, threshold='mean')
 sfm.fit(x,y)
@@ -152,7 +146,6 @@ sfm.fit(x,y)
 
 ```
 selected_feature = x.columns[sfm.get_support()]
-
 print("Selected Features:")
 print(selected_feature)
 ```
@@ -162,7 +155,6 @@ print(selected_feature)
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import RFE
-
 model = LogisticRegression()
 num_features_to_remove =2
 rfe = RFE(model, n_features_to_select=(len(x.columns) - num_features_to_remove))
@@ -180,7 +172,6 @@ print(selected_feature)
 ```
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(x,y)
 ```
@@ -190,7 +181,6 @@ model.fit(x,y)
 feature_importances = model.feature_importances_
 threshold = 0.15
 selected_features = x.columns[feature_importances > threshold]
-
 print("Selected Features:")
 print(selected_feature)
 ```
